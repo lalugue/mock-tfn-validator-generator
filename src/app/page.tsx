@@ -1,15 +1,17 @@
-import TFNInput from "./components/tfn_input";
+"use client";
+
+import TFNContextProvider from "./providers/tfn_provider";
+import TFNForm from "./components/tfn_form";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center">
-        <TFNInput />
-        <button className="p-2 rounded-lg bg-green-500 hover:bg-green-400">
-          Validate
-        </button>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
-    </div>
+    <TFNContextProvider>
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <main className="flex flex-col gap-8 row-start-2 items-center">
+          <TFNForm />
+        </main>
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+      </div>
+    </TFNContextProvider>
   );
 }
