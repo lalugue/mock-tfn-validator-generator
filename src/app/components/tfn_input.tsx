@@ -1,9 +1,15 @@
 "use client";
 
-interface TFNInputProps {
+type TFNInputProps = {
   handleOnChange?: (value: string) => void;
-}
-export default function TFNInput({ handleOnChange = () => {} }: TFNInputProps) {
+};
+
+const defaultTFNProps = {
+  handleOnChange: () => {},
+};
+
+export default function TFNInput(props: TFNInputProps) {
+  const { handleOnChange } = { ...defaultTFNProps, ...props };
   return (
     <input
       className="border-2 border-gray-400 focus:border-blue-300"
