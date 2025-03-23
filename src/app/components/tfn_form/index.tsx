@@ -1,8 +1,8 @@
 "use client";
 
 import { useContext } from "react";
-import { TFNContext } from "../providers/tfn_provider";
-import TFNInput from "./tfn_input";
+import { TFNContext } from "../../providers/tfn_provider";
+import TFNInput from "../tfn_input";
 
 export default function TFNForm() {
   // @TODO: add tfn as param for validation calls, etc
