@@ -3,10 +3,10 @@
 import { useContext } from "react";
 import { TFNContext } from "../../providers/tfn_provider";
 import TFNInput from "../tfn_input";
+import { validateTFN } from "./utils";
 
 export default function TFNForm() {
   // @TODO: add tfn as param for validation calls, etc
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { tfn, setTfn } = useContext(TFNContext);
   return (
     <div className="tfn-form">
@@ -14,8 +14,7 @@ export default function TFNForm() {
       <button
         className="p-2 rounded-lg bg-green-500 hover:bg-green-400"
         onClick={() => {
-          // @TODO: add validation calls, etc here
-          // noop
+          validateTFN(tfn);
         }}>
         Validate
       </button>
