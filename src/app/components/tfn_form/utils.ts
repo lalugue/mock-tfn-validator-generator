@@ -1,0 +1,46 @@
+export const validateTFN= <T extends string | number>(tfnInput: T) => {
+
+ let tfn = tfnInput.toString()
+
+  //remove spaces and update
+  tfn = tfn.replace(/\s+/g, "");
+
+
+  //remove hyphens and update
+  tfn = tfn.replace(/[-]/g, "");
+
+
+  //validate only digits
+  const isNumber = /^[0-9]+$/.test(tfn);
+  if (!isNumber) {
+    alert("Invalid TFN, only numbers are allowed.");
+  }
+
+  //validate length
+  const length = tfn.length;
+  if (length != 9) {
+    alert("Invalid TFN, must have 9 digits.");
+  }
+
+  const digits = tfn.split("");
+
+  //do the calcs
+  const sum =
+    parseInt(digits[0]) * 1 +
+    parseInt(digits[1]) * 4 +
+    parseInt(digits[2]) * 3 +
+    parseInt(digits[3]) * 7 +
+    parseInt(digits[4]) * 5 +
+    parseInt(digits[5]) * 8 +
+    parseInt(digits[6]) * 6 +
+    parseInt(digits[7]) * 9 +
+    parseInt(digits[8]) * 10;
+
+  const remainder = sum % 11;
+
+  if (remainder == 0) {
+    alert("Valid TFN, hooray!");
+  } else {
+    alert("Invalid TFN, check the digits.");
+  }
+};
