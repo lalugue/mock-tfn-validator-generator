@@ -1,4 +1,4 @@
-export const validateTFN= <T extends string | number>(tfnInput: T) => {
+export const validateTFN= <T extends string | number>(tfnInput: T): {isValid: boolean, message: string} => {
 
  let tfn = tfnInput.toString()
 
@@ -13,13 +13,19 @@ export const validateTFN= <T extends string | number>(tfnInput: T) => {
   //validate only digits
   const isNumber = /^[0-9]+$/.test(tfn);
   if (!isNumber) {
-    alert("Invalid TFN, only numbers are allowed.");
+    return {
+      isValid: false,
+      message: "Invalid TFN, only numbers are allowed.",
+    }
   }
 
   //validate length
   const length = tfn.length;
   if (length != 9) {
-    alert("Invalid TFN, must have 9 digits.");
+    return {
+      isValid: false,
+      message: "Invalid TFN, must have 9 digits.",
+    }
   }
 
   const digits = tfn.split("");
@@ -39,8 +45,14 @@ export const validateTFN= <T extends string | number>(tfnInput: T) => {
   const remainder = sum % 11;
 
   if (remainder == 0) {
-    alert("Valid TFN, hooray!");
+    return {
+      isValid: true,
+      message: "Valid TFN, hooray!",
+    }
   } else {
-    alert("Invalid TFN, check the digits.");
+    return {
+      isValid: false,
+      message: "Invalid TFN, check the digits.",
+    }
   }
 };
