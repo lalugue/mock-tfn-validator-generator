@@ -6,6 +6,11 @@ type TFNContextType = {
   setTfn: (tfn: string) => void;
 };
 
+type ValidationMessageType = {
+  isValid: boolean,
+  message: string,
+}
+
 const defaultTFNContext = {
   tfn: "",
   setTfn: () => {},
