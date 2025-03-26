@@ -4,6 +4,7 @@ import { createContext, ReactNode, useState } from "react";
 type TFNContextType = {
   tfn: string;
   setTfn: (tfn: string) => void;
+  validationMessage: ValidationMessageType | null;
 };
 
 type ValidationMessageType = {
@@ -14,6 +15,7 @@ type ValidationMessageType = {
 const defaultTFNContext = {
   tfn: "",
   setTfn: () => {},
+  validationMessage: null,
 };
 
 export const TFNContext = createContext<TFNContextType>(defaultTFNContext);
