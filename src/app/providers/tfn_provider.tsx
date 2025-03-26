@@ -5,6 +5,7 @@ type TFNContextType = {
   tfn: string;
   setTfn: (tfn: string) => void;
   validationMessage: ValidationMessageType | null;
+  setValidationMessage: (msg: ValidationMessageType) => void;
 };
 
 type ValidationMessageType = {
@@ -16,6 +17,7 @@ const defaultTFNContext = {
   tfn: "",
   setTfn: () => {},
   validationMessage: null,
+  setValidationMessage: () => {},
 };
 
 export const TFNContext = createContext<TFNContextType>(defaultTFNContext);
