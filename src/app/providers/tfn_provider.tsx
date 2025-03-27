@@ -8,7 +8,7 @@ type TFNContextType = {
   setValidationMessage: (msg: ValidationMessageType) => void;
 };
 
-type ValidationMessageType = {
+export type ValidationMessageType = {
   isValid: boolean,
   message: string,
 }
