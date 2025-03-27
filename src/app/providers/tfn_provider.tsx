@@ -26,9 +26,10 @@ export default function TFNContextProvider({
   children,
 }: TFNContextProviderProps) {
   const [tfn, setTfn] = useState("");
+  const [validationMessage, setValidationMessage] = useState<ValidationMessageType | null>(null);
 
   return (
-    <TFNContext.Provider value={{ tfn, setTfn }}>
+    <TFNContext.Provider value={{ tfn, setTfn, validationMessage, setValidationMessage }}>
       {children}
     </TFNContext.Provider>
   );
