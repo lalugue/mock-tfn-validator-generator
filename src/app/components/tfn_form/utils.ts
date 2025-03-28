@@ -1,6 +1,6 @@
 import { ValidationMessageType } from "@/app/providers/tfn_provider";
 
-export const validateTFN= <T extends string | number>(tfnInput: T): ValidationMessageType => {
+export const validateTFN = (tfnInput: string | number): ValidationMessageType => {
 
  let tfn = tfnInput.toString()
 
