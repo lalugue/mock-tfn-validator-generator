@@ -6,7 +6,7 @@ import TFNInput from "../tfn_input";
 import { validateTFN } from "./utils";
 
 export default function TFNForm() {
-  const { tfn, setTfn } = useContext(TFNContext);
+  const { tfn, setTfn, validationMessage, setValidationMessage } = useContext(TFNContext);
   return (
     <div className="tfn-form">
       <TFNInput handleOnChange={setTfn} />
