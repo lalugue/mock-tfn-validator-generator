@@ -8,7 +8,7 @@ import { validateTFN } from "./utils";
 export default function TFNForm() {
   const { tfn, setTfn, validationMessage, setValidationMessage } = useContext(TFNContext);
   return (
-    <div className="tfn-form">
+    <div className="tfn-form flex flex-col gap-2">
       <TFNInput handleOnChange={setTfn} />
       <button
         className="p-2 rounded-lg bg-green-500 hover:bg-green-400"
