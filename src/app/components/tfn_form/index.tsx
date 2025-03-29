@@ -17,6 +17,7 @@ export default function TFNForm() {
         }}>
         Validate
       </button>
+      {validationMessage && <span className={validationMessage.isValid ? "text-green-500" : "text-red-500"}>{validationMessage.message}</span>}
     </div>
   );
 }
