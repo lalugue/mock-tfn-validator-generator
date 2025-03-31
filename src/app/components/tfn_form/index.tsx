@@ -13,7 +13,10 @@ export default function TFNForm() {
       <button
         className="p-2 rounded-lg bg-green-500 hover:bg-green-400"
         onClick={() => {
-          setValidationMessage({...validateTFN(tfn)});
+          const newValidationMessage = validateTFN(tfn)
+          if(newValidationMessage){
+            setValidationMessage({...newValidationMessage});
+          }    
         }}>
         Validate
       </button>
