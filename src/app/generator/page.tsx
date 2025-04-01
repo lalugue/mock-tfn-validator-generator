@@ -1,7 +1,12 @@
 export default function TFNGenerator() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      TFN Generator
-    </div>
+    <>
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        TFN Generator
+      </div>
+      <button className="p-2 rounded-lg bg-green-500 hover:bg-green-400">
+        Generate
+      </button>
+    </>
   );
 }
