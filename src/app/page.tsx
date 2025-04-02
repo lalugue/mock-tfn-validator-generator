@@ -1,12 +1,8 @@
-"use client";
-
-import TFNContextProvider from "./providers/tfn_provider";
-import TFNForm from "./components/tfn_form";
-
 export default function Home() {
   return (
-    <TFNContextProvider>
-      <TFNForm />
-    </TFNContextProvider>
+    <div className="home">
+      <p>Welcome to TFN Validator Home!</p>
+      <p>Click one of the links above to validate or generate a TFN</p>
+    </div>
   );
 }
