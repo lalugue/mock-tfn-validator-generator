@@ -7,5 +7,5 @@ export const generateTFN = () => {
     tfn = Math.floor(Math.random() * 10 ** 9);
   }
 
-  alert(tfn);
+  return tfn;
 };
