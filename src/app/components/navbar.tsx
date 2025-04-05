@@ -6,6 +6,9 @@ export default function NavBar() {
       <Link className="mx-4" href="/">
         Home
       </Link>
+      <Link className="mx-4" href="/validator">
+        Validate TFN
+      </Link>
       <Link className="mx-4" href="/generator">
         Generate TFN
       </Link>
