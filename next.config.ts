@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/validator',
+        source: "/",
+        destination: "/validator",
         permanent: true,
       },
-    ]
+    ];
   },
 };
 

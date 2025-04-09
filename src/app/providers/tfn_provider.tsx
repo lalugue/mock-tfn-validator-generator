@@ -9,9 +9,9 @@ type TFNContextType = {
 };
 
 export type ValidationMessageType = {
-  isValid: boolean,
-  message: string,
-} | null
+  isValid: boolean;
+  message: string;
+} | null;
 
 const defaultTFNContext = {
   tfn: "",
@@ -26,10 +26,13 @@ export default function TFNContextProvider({
   children,
 }: TFNContextProviderProps) {
   const [tfn, setTfn] = useState("");
-  const [validationMessage, setValidationMessage] = useState<ValidationMessageType>(null);
+  const [validationMessage, setValidationMessage] =
+    useState<ValidationMessageType>(null);
 
   return (
-    <TFNContext.Provider value={{ tfn, setTfn, validationMessage, setValidationMessage }}>
+    <TFNContext.Provider
+      value={{ tfn, setTfn, validationMessage, setValidationMessage }}
+    >
       {children}
     </TFNContext.Provider>
   );

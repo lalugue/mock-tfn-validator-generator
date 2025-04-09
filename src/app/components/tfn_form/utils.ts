@@ -1,16 +1,15 @@
 import { ValidationMessageType } from "@/app/providers/tfn_provider";
 
-export const validateTFN = (tfnInput: string | number): ValidationMessageType => {
-
- let tfn = tfnInput.toString()
+export const validateTFN = (
+  tfnInput: string | number,
+): ValidationMessageType => {
+  let tfn = tfnInput.toString();
 
   //remove spaces and update
   tfn = tfn.replace(/\s+/g, "");
 
-
   //remove hyphens and update
   tfn = tfn.replace(/[-]/g, "");
-
 
   //validate only digits
   const isNumber = /^[0-9]+$/.test(tfn);
@@ -18,7 +17,7 @@ export const validateTFN = (tfnInput: string | number): ValidationMessageType =>
     return {
       isValid: false,
       message: "Invalid TFN, only numbers are allowed.",
-    }
+    };
   }
 
   //validate length
@@ -27,7 +26,7 @@ export const validateTFN = (tfnInput: string | number): ValidationMessageType =>
     return {
       isValid: false,
       message: "Invalid TFN, must have 9 digits.",
-    }
+    };
   }
 
   const digits = tfn.split("");
@@ -50,11 +49,11 @@ export const validateTFN = (tfnInput: string | number): ValidationMessageType =>
     return {
       isValid: true,
       message: "Valid TFN, hooray!",
-    }
+    };
   } else {
     return {
       isValid: false,
       message: "Invalid TFN, check the digits.",
-    }
+    };
   }
 };
