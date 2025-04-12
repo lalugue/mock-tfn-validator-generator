@@ -9,7 +9,7 @@ export default function TFNForm() {
   const { tfn, setTfn, validationMessage, setValidationMessage } =
     useContext(TFNContext);
   return (
-    <div className="tfn-form flex flex-col gap-2">
+    <div className="tfn-form flex flex-col gap-2 w-72">
       <TFNInput
         handleOnChange={(e) => {
           setTfn(e);
