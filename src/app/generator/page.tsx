@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 import { generateTFN } from "./utils";
+import TFNOutput from "../components/tfn_output";
 
 export default function TFNGenerator() {
   const [tfn, setTfn] = useState<string | number>("");
   return (
     <div className="tfn-generator flex flex-col gap-2">
-      <span className="bg-gray-300 border-4 border-black border-dashed p-4 w-48 text-center">
-        {tfn}
-      </span>
+      <TFNOutput tfn={tfn} />
       <button
         className="p-2 rounded-lg bg-green-500 hover:bg-green-400"
         onClick={() => {
