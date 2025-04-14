@@ -4,12 +4,12 @@ type TFNInputProps = {
   handleOnChange?: (value: string) => void;
 };
 
-const defaultTFNProps = {
+const defaultTFNInputProps = {
   handleOnChange: () => {},
 };
 
 export default function TFNInput(props: TFNInputProps) {
-  const { handleOnChange } = { ...defaultTFNProps, ...props };
+  const { handleOnChange } = { ...defaultTFNInputProps, ...props };
   return (
     <input
       className="border-2 border-gray-400 focus:border-blue-300"
