@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/",
-        destination: "/validator",
+        destination: "/generator",
         permanent: true,
       },
     ];
