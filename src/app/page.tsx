@@ -1,10 +1,12 @@
-"use client"
 import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  if (window.location.hostname !== "localhost") {
-    redirect("/generator");
-  }
+  useEffect(() => {
+    if (window.location.hostname !== "localhost") {
+      redirect("/generator");
+    }
+  }, []);
 
   return (
     <div className="home">
