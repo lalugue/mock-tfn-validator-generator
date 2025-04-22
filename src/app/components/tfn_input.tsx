@@ -12,7 +12,7 @@ export default function TFNInput(props: TFNInputProps) {
   const { handleOnChange } = { ...defaultTFNInputProps, ...props };
   return (
     <input
-      className="border-2 border-gray-400 focus:border-blue-300"
+      className="border-2 border-gray-400 focus:border-blue-300 dark:text-black"
       placeholder="Enter TFN"
       type="text"
       name="tfn"
