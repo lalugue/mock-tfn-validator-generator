@@ -1,0 +1,5 @@
+- Validation code is adapted from Steve Swinsburg's TFN Validator ([Apache-2.0](https://github.com/steveswinsburg/tfn-validator/blob/93a76299c31021adc7efd132e4fed9f75083b588/LICENSE)). Modifications include, and not limited to, adding types, unit tests, encapsulating the validation code in a Next.js application, and creating a generator with the validation code.
+
+- GitHub Actions config file adapted from Starter Workflows ([MIT License](https://github.com/actions/starter-workflows/blob/85c6b7a620bfd1bb455d6398bdf3b18c4a13db15/LICENSE))
+
+- The application itself is built with [Next.js](https://nextjs.org), bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app)

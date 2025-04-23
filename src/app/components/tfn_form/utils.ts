@@ -1,3 +1,5 @@
+// Adapted from (Apache-2.0): https://github.com/steveswinsburg/tfn-validator/blob/93a76299c31021adc7efd132e4fed9f75083b588/tfn-validator.html
+
 import { ValidationMessageType } from "@/app/providers/tfn_provider";
 
 export const validateTFN = (
