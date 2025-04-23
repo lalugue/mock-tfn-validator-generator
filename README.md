@@ -1,6 +1,6 @@
-# tfn-validator-generator
+# TFN Generator and Validator
 
-A web-based tool for generating and validating Australian Tax File Numbers (TFN). Adapted from and inspired by Steve Swinsburg's [TFN Validator](https://github.com/steveswinsburg/tfn-validator), `tfn-validator-generator` extends the linked project with features such as a TFN generator, an implementation in a modern framework (React/Next.js), unit tests, types (TypeScript), and more.
+A web-based tool for generating and validating Australian Tax File Numbers (TFN). Adapted from and inspired by Steve Swinsburg's [TFN Validator](https://github.com/steveswinsburg/tfn-validator), the `TFN Generator and Validator` extends the project with several features such as a TFN generator, an implementation in a modern framework (React/Next.js), unit tests, types (TypeScript), and more.
 
 # User guide
 
@@ -19,6 +19,8 @@ Enter a TFN and validate it by clicking `Validate`
 ![validator](./validator.png)
 
 # Developer/Template guide
+
+(Note: The section below is also the one shipped with the Next.js default template)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
