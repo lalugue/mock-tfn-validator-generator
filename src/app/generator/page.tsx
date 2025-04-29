@@ -15,7 +15,7 @@ export default function TFNGenerator() {
           setTfn(generateTFN());
         }}
       >
-        Generate
+        Generate Mock TFN
       </button>
     </div>
   );
