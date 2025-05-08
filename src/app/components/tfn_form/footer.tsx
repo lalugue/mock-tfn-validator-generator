@@ -6,7 +6,7 @@ export default function Footer() {
       format and are not meant for official or production use. This project is
       licensed under the Apache License 2.0. The tool operates client-side; it
       does not transmit any data to or from servers. For further details, please
-      refer to this project`s
+      refer to this project`s{" "}
       <a href="https://github.com/lalugue/tfn-validator-generator">
         repository
       </a>
