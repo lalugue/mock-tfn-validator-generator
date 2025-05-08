@@ -1,5 +1,5 @@
 {
-  "name": "tfn-validator-generator",
+  "name": "mock-tfn-validator-generator",
   "version": "0.1.0",
   "private": true,
   "scripts": {

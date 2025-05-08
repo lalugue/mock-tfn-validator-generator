@@ -1,5 +1,5 @@
 # Adapted from (MIT): https://github.com/actions/starter-workflows/blob/85c6b7a620bfd1bb455d6398bdf3b18c4a13db15/pages/nextjs.yml
-name: Deploy tfn-validator-generator to GitHub Pages
+name: Deploy mock-tfn-validator-generator to GitHub Pages
 
 on:
   push:
